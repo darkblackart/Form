@@ -15,7 +15,7 @@
 	<div class="panel panel-primary">
 		<div class="panel-heading">Formularz Zgłoszeniowy na wycieczkę</div>
 		<div class="panel-body">
-			 <form action="#" method="post">
+			 <form action="script.php" method="post">
                  <div class="form-group">
                      <label for="name">Płeć:</label><br>
                      <label class="radio-inline">
@@ -24,35 +24,44 @@
                      <label class="radio-inline">
                          <input type="radio" name="sex" id="sex">Mężczyzna
                      </label>
+                     <div class="alert_sex" id = "alert_sex"></div>
                  </div>
+
 				  <div class="form-group">
 					<label for="name">Imię:</label>
 					<input  class="form-control" id="name">
+                      <div class="alert_name" id = "alert_name"></div>
 				  </div>
+
 				  <div class="form-group">
 					<label for="last_name">Nazwisko:</label>
 					<input  class="form-control" id="last_name">
+                      <div class="alert_last_name" id = "alert_last_name"></div>
 				  </div>
 				  <div class="form-group">
 					<label for="adress">Adres zamieszkania:</label>
 					<input  class="form-control" id="adress">
+                      <div class="alert_adress" id = "alert_adress"></div>
 				  </div>
 				  <div class="form-group">
 					<label for="number_album">Nr Albumu:</label>
 					<input  class="form-control" id="number_album">
+                      <div class="alert_number_album" id = "alert_number_album"></div>
 				  </div>
 				 <div class="form-group">
                      <label for="field">Kierunek Studiów:</label>
                      <input  class="form-control" id="field">
+                     <div class="alert_field" id = "alert_field"></div>
                  </div>
                  <div class="form-group">
                      <label for="email">Adres e-mail:</label>
                      <input  class="form-control" id="email">
+                     <div class="alert_email" id = "alert_email"></div>
                  </div>
-				  <button type="submit" class="btn btn-default" id="send">Wyślij</button>
-				  <div class="message" id = "message">
-					<!--Zwraca komunikaty -->
-				  </div>
+                 <div class="submit">
+                     <input type="button" value="Wyślij" class="btn btn-info" id="send" />
+                 </div>
+				  <div class="message" id = "message"></div>
 			</form> 
 		</div>
 	</div>

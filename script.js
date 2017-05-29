@@ -1,3 +1,11 @@
+var sex;
+var name;
+var last_name;
+var adress;
+var number_album;
+var field;
+var email;
+
 window.onload = function(){
     document.getElementById("send").onclick = function(){
         sprawdzFormularz_1();
@@ -5,26 +13,107 @@ window.onload = function(){
 }
 
 function sprawdzFormularz_1(){
+    zadanie = "";
+    zadanie = new XMLHttpRequest();
 
-    alert(email());
+    sex = sex_f();
+    name = name_f();
+    last_name = last_name_f();
+    adress = adress_f();
+    number_album = number_album_f();
+    field = field_f();
+    email = email_f();
+
+    var zawartosc =
+        "sex=" + sex  +
+        "&name=" + name +
+        "&last_name=" + last_name +
+        "&adress=" + adress +
+        "&number_album=" + number_album +
+        "&field=" + field +
+        "&email=" + email;
+
+    var url = "script.php";
+    zadanie.onreadystatechange = updateDone;
+    zadanie.open("POST", url, true);
+    zadanie.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    zadanie.send(zawartosc);
 }
 
 function updateDone(){
     if(zadanie.readyState == 4 && zadanie.status == 200)
     {
-        document.getElementById("message").innerHTML = zadanie.responseText;
-    }
-}
 
-function sex() {
-    if(document.querySelector('input[name="sex"]:checked') == null){
-        return false;
+     var empty = "<div class=\"alert alert-danger\" role=\"alert\"> <strong>Błąd!</strong> Pole wyboru jest puste</div>";
+     var error = "<div class=\"alert alert-danger\" role=\"alert\"> <strong>Błąd!</strong> Proszę wprowadzić poprawne dane</div>";
+
+     if(sex == 0){
+         document.getElementById("alert_sex").innerHTML = empty;
+     }else if(sex == 2){
+         document.getElementById("alert_sex").innerHTML = error;
+     }else{
+         document.getElementById("alert_sex").innerHTML = "";
+     }
+
+    if(name == 0){
+        document.getElementById("alert_name").innerHTML = empty;
+    }else if(name == 2){
+        document.getElementById("alert_name").innerHTML = error;
     }else{
-        return true;
+        document.getElementById("alert_name").innerHTML = "";
+    }
+
+    if(last_name == 0){
+        document.getElementById("alert_last_name").innerHTML = empty;
+    }else if(last_name == 2){
+        document.getElementById("alert_last_name").innerHTML = error;
+    }else{
+        document.getElementById("alert_last_name").innerHTML = "";
+    }
+
+    if(adress == 0){
+        document.getElementById("alert_adress").innerHTML = empty;
+    }else if(adress == 2){
+        document.getElementById("alert_adress").innerHTML = error;
+    }else{
+        document.getElementById("alert_adress").innerHTML = "";
+    }
+
+    if(number_album == 0){
+        document.getElementById("alert_number_album").innerHTML = empty;
+    }else if(number_album == 2){
+        document.getElementById("alert_number_album").innerHTML = error;
+    }else{
+        document.getElementById("alert_number_album").innerHTML = "";
+    }
+
+    if(field == 0){
+        document.getElementById("alert_field").innerHTML = empty;
+    }else if(field == 2){
+        document.getElementById("alert_field").innerHTML = error;
+    }else{
+        document.getElementById("alert_field").innerHTML = "";
+    }
+
+    if(email == 0){
+        document.getElementById("alert_email").innerHTML = empty;
+    }else if(email == 2){
+        document.getElementById("alert_email").innerHTML = error;
+    }else{
+        document.getElementById("alert_email").innerHTML = "";
+    }
     }
 }
 
-function name() {
+function sex_f() {
+    if(document.querySelector('input[name="sex"]:checked') == null){
+        return 0;
+    }else{
+        return 1;
+    }
+}
+
+function name_f() {
     if(document.getElementById("name").value.split('\n') == ""){
         return 0;
     }else{
@@ -38,7 +127,7 @@ function name() {
     }
 }
 
-function last_name() {
+function last_name_f() {
     if(document.getElementById("last_name").value.split('\n') == ""){
         return 0;
     }else{
@@ -52,15 +141,15 @@ function last_name() {
     }
 }
 
-function adress() {
+function adress_f() {
     if(document.getElementById("adress").value.split('\n') == ""){
-        return false;
+        return 0;
     }else{
-        return true;
+        return 1;
     }
 }
 
-function number_album() {
+function number_album_f() {
     if(document.getElementById("number_album").value.split('\n') == ""){
         return 0;
     }else{
@@ -74,7 +163,7 @@ function number_album() {
     }
 }
 
-function field() {
+function field_f() {
     if(document.getElementById("field").value.split('\n') == ""){
         return 0;
     }else{
@@ -88,7 +177,7 @@ function field() {
     }
 }
 
-function email() {
+function email_f() {
     if(document.getElementById("email").value.split('\n') == ""){
         return 0;
     }else{

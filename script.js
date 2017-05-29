@@ -44,6 +44,7 @@ function updateDone(){
     if(zadanie.readyState == 4 && zadanie.status == 200)
     {
 
+    document.getElementById("alert_send").innerHTML = zadanie.responseText;
      var empty = "<div class=\"alert alert-danger\" role=\"alert\"> <strong>Błąd!</strong> Pole wyboru jest puste</div>";
      var error = "<div class=\"alert alert-danger\" role=\"alert\"> <strong>Błąd!</strong> Proszę wprowadzić poprawne dane</div>";
 

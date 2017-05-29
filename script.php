@@ -1,4 +1,5 @@
-<?php
+﻿<?php
+
 if($_POST['sex'] == 1 && $_POST['name'] == 1 && $_POST['last_name'] == 1 && $_POST['adress'] == 1 && $_POST['number_album'] == 1 && $_POST['field'] == 1 && $_POST['email'] == 1){
 		$adresat = 'it@ignpolska.pl'; 
 		$headers = "MIME-Version: 1.0\r\n";
@@ -15,8 +16,13 @@ if($_POST['sex'] == 1 && $_POST['name'] == 1 && $_POST['last_name'] == 1 && $_PO
 		Kierunek Studiow: ".$POST['field'].",<br>
 		Email: ".$POST['email']."<br>
 		";
-	
-		if (mail($adresat, 'Konkurs - '.$_POST['mail'].'', $content, $headers)){
+
+        ?>
+        <div class="alert alert-success" role="alert">
+            <strong>Gratulujemy!</strong> Twoje zgloszenie zostalo wyslane.
+        </div>
+        <?php
+		/*if (mail('TEST', $content, $headers)){
 			?>
 			<div class="alert alert-success" role="alert">
 			  <strong>Gratulujemy!</strong> Twoje zgloszenie zostalo wyslane.
@@ -25,10 +31,10 @@ if($_POST['sex'] == 1 && $_POST['name'] == 1 && $_POST['last_name'] == 1 && $_PO
 		}else{ 
 			?>
 			<div class="alert alert-danger" role="alert">
-			  Wystapil problem, spr�buj jeszcze raz.
+			  Wystapil problem, spróbuj jeszcze raz.
 			</div>
 			<?php
-		}
+		}*/
 	
 }
 ?>

@@ -59,9 +59,10 @@
                      <div class="alert_email" id = "alert_email"></div>
                  </div>
                  <div class="submit">
+                     <div class="alert_send" id = "alert_send"></div>
                      <input type="button" value="Wyślij" class="btn btn-info" id="send" />
                  </div>
-				  <div class="message" id = "message"></div>
+
 			</form> 
 		</div>
 	</div>

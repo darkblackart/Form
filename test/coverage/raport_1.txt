@@ -1,0 +1,10 @@
+Writing coverage object [Z:\home\pi\www\formularz\Form\coverage\coverage.json]
+Writing coverage reports at [Z:\home\pi\www\formularz\Form\coverage]
+=============================================================================
+
+=============================== Coverage summary ===============================
+Statements   : 48.08% ( 50/104 )
+Branches     : 41.07% ( 23/56 )
+Functions    : 80% ( 8/10 )
+Lines        : 48.08% ( 50/104 )
+================================================================================

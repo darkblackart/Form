@@ -12,13 +12,16 @@
     "stryker-mocha-runner": "0.2.0",
     "jshint": "2.9.4",
     "jshint-html-reporter": "0.2.5",
-    "jshint-stylish": "2.2.1"
+    "jshint-stylish": "2.2.1",
+    "istanbul": "0.4.5"
 
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --opts tests/mutant/mocha.opts",
+    "test": "node_modules/.bin/mocha --opts tests/mocha.opts",
     "stryker": "stryker run stryker.conf.js",
     "jshint": "jshint --reporter=node_modules/jshint-stylish  script.js || true",
-    "jshint-html": "jshint --reporter node_modules/jshint-html-reporter/reporter.js script.js > /tests/jshint/report.html || true"
+    "jshint-html": "jshint --reporter node_modules/jshint-html-reporter/reporter.js script.js > /tests/jshint/report.html || true",
+    "coverage": "node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive -R spec"
+
   }
 }

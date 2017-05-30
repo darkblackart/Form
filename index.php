@@ -19,10 +19,10 @@
                  <div class="form-group">
                      <label for="name">Płeć:</label><br>
                      <label class="radio-inline">
-                         <input type="radio" name="sex" id="sex">Kobieta
+                         <input type="radio" name="sex" id="sex" value="Kobieta">Kobieta
                      </label>
                      <label class="radio-inline">
-                         <input type="radio" name="sex" id="sex">Mężczyzna
+                         <input type="radio" name="sex" id="sex" value="Mężczyzna">Mężczyzna
                      </label>
                      <div class="alert_sex" id = "alert_sex"></div>
                  </div>

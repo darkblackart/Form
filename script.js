@@ -23,15 +23,28 @@ function sprawdzFormularz_1(){
     number_album = number_album_f();
     field = field_f();
     email = email_f();
+	
+	if(document.querySelector('input[name="sex"]:checked') != null){
+		var sex_post = document.querySelector('input[name="sex"]:checked').value;
+	}else{
+		var sex_post = "";
+	}
+	
+    var name_post = document.getElementById("name").value.split('\n');
+    var last_name_post = document.getElementById("last_name").value.split('\n');
+    var adress_post = document.getElementById("adress").value.split('\n');
+    var number_album_post = document.getElementById("number_album").value.split('\n');
+    var field_post = document.getElementById("field").value.split('\n');
+    var email_post = document.getElementById("email").value.split('\n');
 
     var zawartosc =
-        "sex=" + sex  +
-        "&name=" + name +
-        "&last_name=" + last_name +
-        "&adress=" + adress +
-        "&number_album=" + number_album +
-        "&field=" + field +
-        "&email=" + email;
+        "sex=" + sex_post  +
+        "&name=" + name_post +
+        "&last_name=" + last_name_post +
+        "&adress=" + adress_post +
+        "&number_album=" + number_album_post +
+        "&field=" + field_post +
+        "&email=" + email_post;
 
     var url = "script.php";
     zadanie.onreadystatechange = updateDone;

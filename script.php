@@ -1,28 +1,26 @@
 ﻿<?php
 
-if($_POST['sex'] == 1 && $_POST['name'] == 1 && $_POST['last_name'] == 1 && $_POST['adress'] == 1 && $_POST['number_album'] == 1 && $_POST['field'] == 1 && $_POST['email'] == 1){
-		$adresat = 'it@ignpolska.pl'; 
-		$headers = "MIME-Version: 1.0\r\n";
-		$headers .= "Content-type: text/html\r\n";
-		$headers .= 'From: it@ignpolska.pl' . "\r\n" .
-					'Reply-To: '.$_POST['email'].'' . "\r\n" .
-					'X-Mailer: PHP/' . phpversion();
-		$content = "
-		Plec: ".$POST['sex'].",<br>
-		Imie: ".$POST['name'].",<br>
-		Nazwisko: ".$POST['last_name'].",<br>
-		Adres Zamieszkania: ".$POST['adress'].",<br>
-		Numer Albumu: ".$POST['number_album'].",<br>
-		Kierunek Studiow: ".$POST['field'].",<br>
-		Email: ".$POST['email']."<br>
-		";
+if(!empty($_POST['sex']) && !empty($_POST['name']) && !empty($_POST['last_name']) && !empty($_POST['adress']) && !empty($_POST['number_album']) && !empty($_POST['field']) && !empty($_POST['email'])){
 
-        ?>
-        <div class="alert alert-success" role="alert">
-            <strong>Gratulujemy!</strong> Twoje zgloszenie zostalo wyslane.
-        </div>
-        <?php
-		/*if (mail('TEST', $content, $headers)){
+$message = "
+Plec: ".$_POST['sex'].",
+Imie: ".$_POST['name'].",
+Nazwisko: ".$_POST['last_name'].",
+Adres Zamieszkania: ".$_POST['adress'].",
+Numer Albumu: ".$_POST['number_album'].",
+Kierunek Studiow: ".$_POST['field'].",
+Email: ".$_POST['email']."
+";
+
+		$to = "it@ignpolska.pl";
+		$subject = "Zgłoszenie studenta: ".$_POST['name']." ".$_POST['last_name'];
+		$from = "darkblackarts@gmail.com";
+		$headers .= 'From: darkblackarts@gmail.com' . "\r\n" .
+			'Reply-To: '.$_POST['email'].'' . "\r\n" .
+			'X-Mailer: PHP/' . phpversion();
+
+
+		if (mail($to,$subject,$message,$headers)){
 			?>
 			<div class="alert alert-success" role="alert">
 			  <strong>Gratulujemy!</strong> Twoje zgloszenie zostalo wyslane.
@@ -34,7 +32,7 @@ if($_POST['sex'] == 1 && $_POST['name'] == 1 && $_POST['last_name'] == 1 && $_PO
 			  Wystapil problem, spróbuj jeszcze raz.
 			</div>
 			<?php
-		}*/
+		}
 	
 }
 ?>

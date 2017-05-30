@@ -1,0 +1,5 @@
+> Form@1.0.0 jshint Z:\home\pi\www\formularz\Form
+> jshint --reporter=node_modules/jshint-stylish  script.js || true
+
+
+√ No problems

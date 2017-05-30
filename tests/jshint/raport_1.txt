@@ -1,0 +1,21 @@
+> Form@1.0.0 jshint Z:\home\pi\www\formularz\Form
+> jshint --reporter=node_modules/jshint-stylish  script.js || true
+
+script.js
+  line 19   col 60  Use '!==' to compare with 'null'.
+  line 48   col 12  Use '===' to compare with ''.
+  line 56   col 12  Use '===' to compare with ''.
+  line 69   col 12  Use '===' to compare with ''.
+  line 82   col 12  Use '===' to compare with ''.
+  line 90   col 12  Use '===' to compare with ''.
+  line 103  col 12  Use '===' to compare with ''.
+  line 116  col 12  Use '===' to compare with ''.
+  line 141  col 17  Use '===' to compare with '0'.
+  line 147  col 17  Use '===' to compare with '0'.
+  line 155  col 22  Use '===' to compare with '0'.
+  line 163  col 19  Use '===' to compare with '0'.
+  line 171  col 25  Use '===' to compare with '0'.
+  line 179  col 18  Use '===' to compare with '0'.
+  line 187  col 18  Use '===' to compare with '0'.
+
+  ‼  15 warnings

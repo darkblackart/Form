@@ -1,6 +1,38 @@
 ﻿<?php
 
-if(!empty($_POST['sex']) && !empty($_POST['name']) && !empty($_POST['last_name']) && !empty($_POST['adress']) && !empty($_POST['number_album']) && !empty($_POST['field']) && !empty($_POST['email'])){
+if(
+	!empty($_POST['sex']) && 
+	$_POST['sex'] != "0" &&
+	
+	!empty($_POST['name']) &&
+	!is_numeric($_POST['name']) &&
+	$_POST['name'] != "0" &&
+	$_POST['name'] != "2" &&
+	
+	!empty($_POST['last_name']) &&
+	!is_numeric($_POST['last_name']) &&
+	$_POST['last_name'] != "0" &&
+	$_POST['last_name'] != "2" &&	
+	
+	!empty($_POST['adress']) &&
+	$_POST['adress'] != "0"	&&
+	
+	!empty($_POST['number_album']) &&
+	is_numeric($_POST['number_album']) &&
+	$_POST['number_album'] != "0" &&
+	$_POST['number_album'] != "2" &&
+	
+	!empty($_POST['field']) &&
+	!is_numeric($_POST['field']) &&
+	$_POST['field'] != "0" &&
+	$_POST['field'] != "2" &&	
+	
+	!empty($_POST['email']) &&
+	$_POST['email'] != "0" &&
+	$_POST['email'] != "2"	
+
+){
+	
 
 $message = "
 Plec: ".$_POST['sex'].",

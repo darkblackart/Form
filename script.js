@@ -1,50 +1,41 @@
-var sex;
-var name;
-var last_name;
-var adress;
-var number_album;
-var field;
-var email;
+var sex = 0;
+var name = 0;
+var last_name = 0;
+var adress = 0;
+var number_album = 0;
+var field = 0;
+var email = 0;
 
-window.onload = function(){
+/*window.onload = function(){
     document.getElementById("send").onclick = function(){
         sprawdzFormularz_1();
     }
-}
+}*/
 
 function sprawdzFormularz_1(){
     zadanie = "";
     zadanie = new XMLHttpRequest();
-
-    sex = sex_f();
-    name = name_f();
-    last_name = last_name_f();
-    adress = adress_f();
-    number_album = number_album_f();
-    field = field_f();
-    email = email_f();
 	
 	if(document.querySelector('input[name="sex"]:checked') != null){
-		var sex_post = document.querySelector('input[name="sex"]:checked').value;
-	}else{
-		var sex_post = "";
+		sex = sex_f(document.querySelector('input[name="sex"]:checked').value);
 	}
+
+    name = name_f(document.getElementById("name").value.split('\n'));
+    last_name = last_name_f(document.getElementById("last_name").value.split('\n'));
+    adress = adress_f(document.getElementById("adress").value.split('\n'));
+    number_album = number_album_f(document.getElementById("number_album").value.split('\n'));
+    field = field_f(document.getElementById("field").value.split('\n'));
+    email = email_f(document.getElementById("email").value.split('\n'));
 	
-    var name_post = document.getElementById("name").value.split('\n');
-    var last_name_post = document.getElementById("last_name").value.split('\n');
-    var adress_post = document.getElementById("adress").value.split('\n');
-    var number_album_post = document.getElementById("number_album").value.split('\n');
-    var field_post = document.getElementById("field").value.split('\n');
-    var email_post = document.getElementById("email").value.split('\n');
 
     var zawartosc =
-        "sex=" + sex_post  +
-        "&name=" + name_post +
-        "&last_name=" + last_name_post +
-        "&adress=" + adress_post +
-        "&number_album=" + number_album_post +
-        "&field=" + field_post +
-        "&email=" + email_post;
+        "sex=" + sex  +
+        "&name=" + name +
+        "&last_name=" + last_name +
+        "&adress=" + adress +
+        "&number_album=" + number_album +
+        "&field=" + field +
+        "&email=" + email;
 
     var url = "script.php";
     zadanie.onreadystatechange = updateDone;
@@ -53,87 +44,20 @@ function sprawdzFormularz_1(){
     zadanie.send(zawartosc);
 }
 
-function updateDone(){
-    if(zadanie.readyState == 4 && zadanie.status == 200)
-    {
-
-    document.getElementById("alert_send").innerHTML = zadanie.responseText;
-     var empty = "<div class=\"alert alert-danger\" role=\"alert\"> <strong>Błąd!</strong> Pole wyboru jest puste</div>";
-     var error = "<div class=\"alert alert-danger\" role=\"alert\"> <strong>Błąd!</strong> Proszę wprowadzić poprawne dane</div>";
-
-     if(sex == 0){
-         document.getElementById("alert_sex").innerHTML = empty;
-     }else if(sex == 2){
-         document.getElementById("alert_sex").innerHTML = error;
-     }else{
-         document.getElementById("alert_sex").innerHTML = "";
-     }
-
-    if(name == 0){
-        document.getElementById("alert_name").innerHTML = empty;
-    }else if(name == 2){
-        document.getElementById("alert_name").innerHTML = error;
+function sex_f(cmd) {
+    if(cmd == ""){
+        return 0;
     }else{
-        document.getElementById("alert_name").innerHTML = "";
-    }
-
-    if(last_name == 0){
-        document.getElementById("alert_last_name").innerHTML = empty;
-    }else if(last_name == 2){
-        document.getElementById("alert_last_name").innerHTML = error;
-    }else{
-        document.getElementById("alert_last_name").innerHTML = "";
-    }
-
-    if(adress == 0){
-        document.getElementById("alert_adress").innerHTML = empty;
-    }else if(adress == 2){
-        document.getElementById("alert_adress").innerHTML = error;
-    }else{
-        document.getElementById("alert_adress").innerHTML = "";
-    }
-
-    if(number_album == 0){
-        document.getElementById("alert_number_album").innerHTML = empty;
-    }else if(number_album == 2){
-        document.getElementById("alert_number_album").innerHTML = error;
-    }else{
-        document.getElementById("alert_number_album").innerHTML = "";
-    }
-
-    if(field == 0){
-        document.getElementById("alert_field").innerHTML = empty;
-    }else if(field == 2){
-        document.getElementById("alert_field").innerHTML = error;
-    }else{
-        document.getElementById("alert_field").innerHTML = "";
-    }
-
-    if(email == 0){
-        document.getElementById("alert_email").innerHTML = empty;
-    }else if(email == 2){
-        document.getElementById("alert_email").innerHTML = error;
-    }else{
-        document.getElementById("alert_email").innerHTML = "";
-    }
+        return cmd;
     }
 }
 
-function sex_f() {
-    if(document.querySelector('input[name="sex"]:checked') == null){
+function name_f(cmd) {
+    if(cmd == ""){
         return 0;
     }else{
-        return 1;
-    }
-}
-
-function name_f() {
-    if(document.getElementById("name").value.split('\n') == ""){
-        return 0;
-    }else{
-        var name = document.getElementById("name").value.split('\n')
-        if (/^[A-Za-z]+$/.test(name)) {
-            return 1;
+        if (/^[A-Za-z]+$/.test(cmd)) {
+            return cmd;
         }else{
             return 2;
         }
@@ -141,13 +65,12 @@ function name_f() {
     }
 }
 
-function last_name_f() {
-    if(document.getElementById("last_name").value.split('\n') == ""){
+function last_name_f(cmd) {
+    if(cmd == ""){
         return 0;
     }else{
-        var last_name = document.getElementById("last_name").value.split('\n')
-        if (/^[A-Za-z]+$/.test(last_name)) {
-            return 1;
+        if (/^[A-Za-z]+$/.test(cmd)) {
+            return cmd;
         }else{
             return 2;
         }
@@ -155,21 +78,20 @@ function last_name_f() {
     }
 }
 
-function adress_f() {
-    if(document.getElementById("adress").value.split('\n') == ""){
+function adress_f(cmd) {
+    if(cmd == ""){
         return 0;
     }else{
-        return 1;
+        return cmd;
     }
 }
 
-function number_album_f() {
-    if(document.getElementById("number_album").value.split('\n') == ""){
+function number_album_f(cmd) {
+    if(cmd == ""){
         return 0;
     }else{
-        var number_album = document.getElementById("number_album").value.split('\n')
-        if (/^[0-9]+$/.test(number_album)) {
-            return 1;
+        if (/^[0-9]+$/.test(cmd)) {
+            return cmd;
         }else{
             return 2;
         }
@@ -177,13 +99,12 @@ function number_album_f() {
     }
 }
 
-function field_f() {
-    if(document.getElementById("field").value.split('\n') == ""){
+function field_f(cmd) {
+    if(cmd == ""){
         return 0;
     }else{
-        var field = document.getElementById("field").value.split('\n')
-        if (/^[A-Za-z]+$/.test(field)) {
-            return 1;
+        if (/^[A-Za-z]+$/.test(cmd)) {
+            return cmd;
         }else{
             return 2;
         }
@@ -191,13 +112,12 @@ function field_f() {
     }
 }
 
-function email_f() {
-    if(document.getElementById("email").value.split('\n') == ""){
+function email_f(cmd) {
+    if(cmd == ""){
         return 0;
     }else{
-        var email = document.getElementById("email").value.split('\n')
-        if (validateEmail(email)) {
-            return 1;
+        if (validateEmail(cmd)) {
+            return cmd;
         }else{
             return 2;
         }
@@ -209,3 +129,77 @@ function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
+
+function updateDone(){
+    if(zadanie.readyState == 4 && zadanie.status == 200)
+    {
+
+		document.getElementById("alert_send").innerHTML = zadanie.responseText;
+		 var empty = "<div class=\"alert alert-danger\" role=\"alert\"> <strong>Błąd!</strong> Pole wyboru jest puste</div>";
+		 var error = "<div class=\"alert alert-danger\" role=\"alert\"> <strong>Błąd!</strong> Proszę wprowadzić poprawne dane</div>";
+
+		 if(sex == 0){
+			 document.getElementById("alert_sex").innerHTML = empty;
+		 }else{
+			 document.getElementById("alert_sex").innerHTML = "";
+		 }
+
+		if(name == 0){
+			document.getElementById("alert_name").innerHTML = empty;
+		}else if(name == 2){
+			document.getElementById("alert_name").innerHTML = error;
+		}else{
+			document.getElementById("alert_name").innerHTML = "";
+		}
+
+		if(last_name == 0){
+			document.getElementById("alert_last_name").innerHTML = empty;
+		}else if(last_name == 2){
+			document.getElementById("alert_last_name").innerHTML = error;
+		}else{
+			document.getElementById("alert_last_name").innerHTML = "";
+		}
+
+		if(adress == 0){
+			document.getElementById("alert_adress").innerHTML = empty;
+		}else if(adress == 2){
+			document.getElementById("alert_adress").innerHTML = error;
+		}else{
+			document.getElementById("alert_adress").innerHTML = "";
+		}
+
+		if(number_album == 0){
+			document.getElementById("alert_number_album").innerHTML = empty;
+		}else if(number_album == 2){
+			document.getElementById("alert_number_album").innerHTML = error;
+		}else{
+			document.getElementById("alert_number_album").innerHTML = "";
+		}
+
+		if(field == 0){
+			document.getElementById("alert_field").innerHTML = empty;
+		}else if(field == 2){
+			document.getElementById("alert_field").innerHTML = error;
+		}else{
+			document.getElementById("alert_field").innerHTML = "";
+		}
+
+		if(email == 0){
+			document.getElementById("alert_email").innerHTML = empty;
+		}else if(email == 2){
+			document.getElementById("alert_email").innerHTML = error;
+		}else{
+			document.getElementById("alert_email").innerHTML = "";
+		}
+    }
+}
+
+module.exports = {
+    sex_f: sex_f,
+    name_f: name_f,
+    last_name_f: last_name_f,
+    adress_f: adress_f,
+    number_album_f: number_album_f,
+    field_f: field_f,
+    email_f:email_f
+};

@@ -1,0 +1,15 @@
+Tests ran:
+    check sex when string is empty should return 0
+    check name when string is empty should return 0
+    check last_name when string is empty should return 0
+  and 4 more tests!
+
+147 total mutants.
+119 mutants survived.
+  of which 102 were not covered by the tests.
+0 mutants timed out.
+28 mutants killed.
+Ran 0.57 tests per mutant on average.
+Mutation score based on covered code: 62.22%
+Mutation score based on all code: 19.05%
+[2017-05-30 15:41:10.966] [INFO] Stryker - Done in 15 seconds.

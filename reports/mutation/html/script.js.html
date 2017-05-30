@@ -1,0 +1,333 @@
+<html>
+<head>
+    <title>script.js - Stryker report</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="highlightjs/styles/default.css">
+    <link rel="stylesheet" href="stryker.css">
+</head>
+
+<body>  
+    <img class="stryker-image" alt="Stryker" src="stryker-80x80.png">
+
+    <div class="container-fluid">
+        <h1>script.js - Stryker report</h1><div class="col-md-12">
+    <h2>Summary</h2>
+    <div class="row">
+        <div class="col-xs-11">
+            <table class="table table-hover table-bordered table-no-top">
+                <thead>
+                    <tr>
+                        <th style="width: 20%"><div><span>File</span></div></th>
+                        <th colspan="2"><div><span>Mutation score</span></div></th>
+                        <th class="rotate text-center" style="width: 50px"><div><span># Killed</span></div></th>
+                        <th class="rotate text-center" style="width: 50px"><div><span># Survived</span></div></th>
+                        <th class="rotate text-center" style="width: 50px"><div><span># Timeout</span></div></th>
+                        <th class="rotate text-center" style="width: 50px"><div><span># No coverage</span></div></th>
+                        <th class="rotate text-center" style="width: 50px"><div><span># Errors</span></div></th>
+                        <th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total detected</span></div></th>
+                        <th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total undetected</span></div></th>
+                        <th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total mutants</span></div></th>
+                    </tr>
+                </thead>                <tbody>
+                    <tr>
+                        <td><a href="script.js.html">script.js</a></td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="41" aria-valuemin="0" aria-valuemax="100"
+                                    style="width: 41%;">
+                                    41%
+                                </div>
+                            </div>
+                        </td>
+                        <th class="text-center" style="width: 10%">61/147</th>
+                        <td class="text-center">61</td>
+                        <td class="text-center">4</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">82</td>
+                        <td class="text-center">0</td>
+                        <th class="text-center">61</th>
+                        <th class="text-center">86</th>
+                        <th class="text-center">147</th>
+                    </tr>                </tbody>
+            </table>
+        </div>
+    </div>
+    <h2>Code</h2>
+    <div class="row">
+        <div class="col-sm-6">
+           <a href="#" class="stryker-collapse-expand-all">Expand all</a>
+        </div>
+        <div class="col-sm-offset-2 col-sm-4">
+            <label>
+                <input class="stryker-display-killed" type="checkbox"> Also show killed mutants
+            </label>
+        </div>
+    </div>
+    <pre><code class="lang-javascript"><span class="bg-null">var sex &#x3D; 0;
+var name &#x3D; 0;
+var last_name &#x3D; 0;
+var adress &#x3D; 0;
+var number_album &#x3D; 0;
+var field &#x3D; 0;
+var email &#x3D; 0;
+
+/*window.onload &#x3D; function(){
+    document.getElementById(&quot;send&quot;).onclick &#x3D; function(){
+        sprawdzFormularz_1();
+    }
+}*/
+
+function sprawdzFormularz_1()</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="0"><span class="label label-danger">0</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="0">{
+}</span><span class="stryker-original-code" data-mutant="0"><span class="bg-danger">{
+    zadanie &#x3D; &quot;&quot;;
+    zadanie &#x3D; new XMLHttpRequest();
+	
+	if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="1"><span class="label label-danger">1</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="1">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="2"><span class="label label-danger">2</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="2">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="3"><span class="label label-danger">3</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="3">document.querySelector(&#x27;input[name&#x3D;&quot;sex&quot;]:checked&#x27;) &#x3D;&#x3D; null</span><span class="stryker-original-code" data-mutant="1"><span class="stryker-original-code" data-mutant="2"><span class="stryker-original-code" data-mutant="3"><span class="bg-danger">document.querySelector(&#x27;input[name&#x3D;&quot;sex&quot;]:checked&#x27;) !&#x3D; null</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="4"><span class="label label-danger">4</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="4">{
+}</span><span class="stryker-original-code" data-mutant="4"><span class="bg-danger">{
+		sex &#x3D; sex_f(document.querySelector(&#x27;input[name&#x3D;&quot;sex&quot;]:checked&#x27;).value);
+	}</span></span><span class="bg-danger">
+
+    name &#x3D; name_f(document.getElementById(&quot;name&quot;).value.split(&#x27;\n&#x27;));
+    last_name &#x3D; last_name_f(document.getElementById(&quot;last_name&quot;).value.split(&#x27;\n&#x27;));
+    adress &#x3D; adress_f(document.getElementById(&quot;adress&quot;).value.split(&#x27;\n&#x27;));
+    number_album &#x3D; number_album_f(document.getElementById(&quot;number_album&quot;).value.split(&#x27;\n&#x27;));
+    field &#x3D; field_f(document.getElementById(&quot;field&quot;).value.split(&#x27;\n&#x27;));
+    email &#x3D; email_f(document.getElementById(&quot;email&quot;).value.split(&#x27;\n&#x27;));
+	
+
+    var zawartosc &#x3D;
+        </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="5"><span class="label label-danger">5</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="5">&#x27;sex&#x3D;&#x27; + sex + &#x27;&amp;name&#x3D;&#x27; + name + &#x27;&amp;last_name&#x3D;&#x27; + last_name + &#x27;&amp;adress&#x3D;&#x27; + adress + &#x27;&amp;number_album&#x3D;&#x27; + number_album + &#x27;&amp;field&#x3D;&#x27; + field + &#x27;&amp;email&#x3D;&#x27; - email</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="6"><span class="label label-danger">6</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="6">&#x27;sex&#x3D;&#x27; + sex + &#x27;&amp;name&#x3D;&#x27; + name + &#x27;&amp;last_name&#x3D;&#x27; + last_name + &#x27;&amp;adress&#x3D;&#x27; + adress + &#x27;&amp;number_album&#x3D;&#x27; + number_album + &#x27;&amp;field&#x3D;&#x27; + field - &#x27;&amp;email&#x3D;&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="7"><span class="label label-danger">7</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="7">&#x27;sex&#x3D;&#x27; + sex + &#x27;&amp;name&#x3D;&#x27; + name + &#x27;&amp;last_name&#x3D;&#x27; + last_name + &#x27;&amp;adress&#x3D;&#x27; + adress + &#x27;&amp;number_album&#x3D;&#x27; + number_album + &#x27;&amp;field&#x3D;&#x27; - field</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="8"><span class="label label-danger">8</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="8">&#x27;sex&#x3D;&#x27; + sex + &#x27;&amp;name&#x3D;&#x27; + name + &#x27;&amp;last_name&#x3D;&#x27; + last_name + &#x27;&amp;adress&#x3D;&#x27; + adress + &#x27;&amp;number_album&#x3D;&#x27; + number_album - &#x27;&amp;field&#x3D;&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="9"><span class="label label-danger">9</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="9">&#x27;sex&#x3D;&#x27; + sex + &#x27;&amp;name&#x3D;&#x27; + name + &#x27;&amp;last_name&#x3D;&#x27; + last_name + &#x27;&amp;adress&#x3D;&#x27; + adress + &#x27;&amp;number_album&#x3D;&#x27; - number_album</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="10"><span class="label label-danger">10</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="10">&#x27;sex&#x3D;&#x27; + sex + &#x27;&amp;name&#x3D;&#x27; + name + &#x27;&amp;last_name&#x3D;&#x27; + last_name + &#x27;&amp;adress&#x3D;&#x27; + adress - &#x27;&amp;number_album&#x3D;&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="11"><span class="label label-danger">11</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="11">&#x27;sex&#x3D;&#x27; + sex + &#x27;&amp;name&#x3D;&#x27; + name + &#x27;&amp;last_name&#x3D;&#x27; + last_name + &#x27;&amp;adress&#x3D;&#x27; - adress</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="12"><span class="label label-danger">12</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="12">&#x27;sex&#x3D;&#x27; + sex + &#x27;&amp;name&#x3D;&#x27; + name + &#x27;&amp;last_name&#x3D;&#x27; + last_name - &#x27;&amp;adress&#x3D;&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="13"><span class="label label-danger">13</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="13">&#x27;sex&#x3D;&#x27; + sex + &#x27;&amp;name&#x3D;&#x27; + name + &#x27;&amp;last_name&#x3D;&#x27; - last_name</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="14"><span class="label label-danger">14</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="14">&#x27;sex&#x3D;&#x27; + sex + &#x27;&amp;name&#x3D;&#x27; + name - &#x27;&amp;last_name&#x3D;&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="15"><span class="label label-danger">15</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="15">&#x27;sex&#x3D;&#x27; + sex + &#x27;&amp;name&#x3D;&#x27; - name</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="16"><span class="label label-danger">16</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="16">&#x27;sex&#x3D;&#x27; + sex - &#x27;&amp;name&#x3D;&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="17"><span class="label label-danger">17</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="17">&#x27;sex&#x3D;&#x27; - sex</span><span class="stryker-original-code" data-mutant="5"><span class="stryker-original-code" data-mutant="6"><span class="stryker-original-code" data-mutant="7"><span class="stryker-original-code" data-mutant="8"><span class="stryker-original-code" data-mutant="9"><span class="stryker-original-code" data-mutant="10"><span class="stryker-original-code" data-mutant="11"><span class="stryker-original-code" data-mutant="12"><span class="stryker-original-code" data-mutant="13"><span class="stryker-original-code" data-mutant="14"><span class="stryker-original-code" data-mutant="15"><span class="stryker-original-code" data-mutant="16"><span class="stryker-original-code" data-mutant="17"><span class="bg-danger">&quot;sex&#x3D;&quot; + sex</span></span><span class="bg-danger">  +
+        &quot;&amp;name&#x3D;&quot;</span></span><span class="bg-danger"> + name</span></span><span class="bg-danger"> +
+        &quot;&amp;last_name&#x3D;&quot;</span></span><span class="bg-danger"> + last_name</span></span><span class="bg-danger"> +
+        &quot;&amp;adress&#x3D;&quot;</span></span><span class="bg-danger"> + adress</span></span><span class="bg-danger"> +
+        &quot;&amp;number_album&#x3D;&quot;</span></span><span class="bg-danger"> + number_album</span></span><span class="bg-danger"> +
+        &quot;&amp;field&#x3D;&quot;</span></span><span class="bg-danger"> + field</span></span><span class="bg-danger"> +
+        &quot;&amp;email&#x3D;&quot;</span></span><span class="bg-danger"> + email</span></span><span class="bg-danger">;
+
+    var url &#x3D; &quot;script.php&quot;;
+    zadanie.onreadystatechange &#x3D; updateDone;
+    zadanie.open(&quot;POST&quot;, url, true);
+    zadanie.setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);
+    zadanie.send(zawartosc);
+}</span></span><span class="bg-null">
+
+function sex_f(cmd) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="18"><span class="label label-success">18</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="18">{
+}</span><span class="stryker-original-code" data-mutant="18"><span class="bg-success">{
+    if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="19"><span class="label label-success">19</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="19">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="20"><span class="label label-success">20</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="20">cmd !&#x3D; &#x27;&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="21"><span class="label label-success">21</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="21">true</span><span class="stryker-original-code" data-mutant="19"><span class="stryker-original-code" data-mutant="20"><span class="stryker-original-code" data-mutant="21"><span class="bg-success">cmd &#x3D;&#x3D; &quot;&quot;</span></span></span></span><span class="bg-success">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="22"><span class="label label-success">22</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="22">{
+}</span><span class="stryker-original-code" data-mutant="22"><span class="bg-success">{
+        return 0;
+    }</span></span><span class="bg-success">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="23"><span class="label label-success">23</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="23">{
+}</span><span class="stryker-original-code" data-mutant="23"><span class="bg-success">{
+        return cmd;
+    }</span></span><span class="bg-success">
+}</span></span><span class="bg-null">
+
+function name_f(cmd) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="24"><span class="label label-success">24</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="24">{
+}</span><span class="stryker-original-code" data-mutant="24"><span class="bg-success">{
+    if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="25"><span class="label label-success">25</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="25">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="26"><span class="label label-success">26</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="26">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="27"><span class="label label-success">27</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="27">cmd !&#x3D; &#x27;&#x27;</span><span class="stryker-original-code" data-mutant="25"><span class="stryker-original-code" data-mutant="26"><span class="stryker-original-code" data-mutant="27"><span class="bg-success">cmd &#x3D;&#x3D; &quot;&quot;</span></span></span></span><span class="bg-success">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="28"><span class="label label-success">28</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="28">{
+}</span><span class="stryker-original-code" data-mutant="28"><span class="bg-success">{
+        return 0;
+    }</span></span><span class="bg-success">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="29"><span class="label label-success">29</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="29">{
+}</span><span class="stryker-original-code" data-mutant="29"><span class="bg-success">{
+        if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="30"><span class="label label-success">30</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="30">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="31"><span class="label label-success">31</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="31">true</span><span class="stryker-original-code" data-mutant="30"><span class="stryker-original-code" data-mutant="31"><span class="bg-success">/^[A-Za-z]+$/.test(cmd)</span></span></span><span class="bg-success">) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="32"><span class="label label-success">32</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="32">{
+}</span><span class="stryker-original-code" data-mutant="32"><span class="bg-success">{
+            return cmd;
+        }</span></span><span class="bg-success">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="33"><span class="label label-success">33</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="33">{
+}</span><span class="stryker-original-code" data-mutant="33"><span class="bg-success">{
+            return 2;
+        }</span></span><span class="bg-success">
+
+    }</span></span><span class="bg-success">
+}</span></span><span class="bg-null">
+
+function last_name_f(cmd) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="34"><span class="label label-success">34</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="34">{
+}</span><span class="stryker-original-code" data-mutant="34"><span class="bg-success">{
+    if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="35"><span class="label label-success">35</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="35">cmd !&#x3D; &#x27;&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="36"><span class="label label-success">36</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="36">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="37"><span class="label label-success">37</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="37">false</span><span class="stryker-original-code" data-mutant="35"><span class="stryker-original-code" data-mutant="36"><span class="stryker-original-code" data-mutant="37"><span class="bg-success">cmd &#x3D;&#x3D; &quot;&quot;</span></span></span></span><span class="bg-success">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="38"><span class="label label-success">38</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="38">{
+}</span><span class="stryker-original-code" data-mutant="38"><span class="bg-success">{
+        return 0;
+    }</span></span><span class="bg-success">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="39"><span class="label label-success">39</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="39">{
+}</span><span class="stryker-original-code" data-mutant="39"><span class="bg-success">{
+        if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="40"><span class="label label-success">40</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="40">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="41"><span class="label label-danger">41</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="41">true</span><span class="stryker-original-code" data-mutant="40"><span class="stryker-original-code" data-mutant="41"><span class="bg-danger">/^[A-Za-z]+$/.test(cmd)</span></span></span><span class="bg-success">) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="42"><span class="label label-success">42</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="42">{
+}</span><span class="stryker-original-code" data-mutant="42"><span class="bg-success">{
+            return cmd;
+        }</span></span><span class="bg-success">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="43"><span class="label label-danger">43</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="43">{
+}</span><span class="stryker-original-code" data-mutant="43"><span class="bg-danger">{
+            return 2;
+        }</span></span><span class="bg-success">
+
+    }</span></span><span class="bg-success">
+}</span></span><span class="bg-null">
+
+function adress_f(cmd) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="44"><span class="label label-success">44</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="44">{
+}</span><span class="stryker-original-code" data-mutant="44"><span class="bg-success">{
+    if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="45"><span class="label label-success">45</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="45">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="46"><span class="label label-success">46</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="46">cmd !&#x3D; &#x27;&#x27;</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="47"><span class="label label-success">47</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="47">true</span><span class="stryker-original-code" data-mutant="45"><span class="stryker-original-code" data-mutant="46"><span class="stryker-original-code" data-mutant="47"><span class="bg-success">cmd &#x3D;&#x3D; &quot;&quot;</span></span></span></span><span class="bg-success">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="48"><span class="label label-success">48</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="48">{
+}</span><span class="stryker-original-code" data-mutant="48"><span class="bg-success">{
+        return 0;
+    }</span></span><span class="bg-success">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="49"><span class="label label-success">49</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="49">{
+}</span><span class="stryker-original-code" data-mutant="49"><span class="bg-success">{
+        return cmd;
+    }</span></span><span class="bg-success">
+}</span></span><span class="bg-null">
+
+function number_album_f(cmd) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="50"><span class="label label-success">50</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="50">{
+}</span><span class="stryker-original-code" data-mutant="50"><span class="bg-success">{
+    if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="51"><span class="label label-success">51</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="51">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="52"><span class="label label-success">52</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="52">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="53"><span class="label label-success">53</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="53">cmd !&#x3D; &#x27;&#x27;</span><span class="stryker-original-code" data-mutant="51"><span class="stryker-original-code" data-mutant="52"><span class="stryker-original-code" data-mutant="53"><span class="bg-success">cmd &#x3D;&#x3D; &quot;&quot;</span></span></span></span><span class="bg-success">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="54"><span class="label label-success">54</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="54">{
+}</span><span class="stryker-original-code" data-mutant="54"><span class="bg-success">{
+        return 0;
+    }</span></span><span class="bg-success">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="55"><span class="label label-success">55</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="55">{
+}</span><span class="stryker-original-code" data-mutant="55"><span class="bg-success">{
+        if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="56"><span class="label label-success">56</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="56">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="57"><span class="label label-success">57</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="57">true</span><span class="stryker-original-code" data-mutant="56"><span class="stryker-original-code" data-mutant="57"><span class="bg-success">/^[0-9]+$/.test(cmd)</span></span></span><span class="bg-success">) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="58"><span class="label label-success">58</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="58">{
+}</span><span class="stryker-original-code" data-mutant="58"><span class="bg-success">{
+            return cmd;
+        }</span></span><span class="bg-success">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="59"><span class="label label-success">59</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="59">{
+}</span><span class="stryker-original-code" data-mutant="59"><span class="bg-success">{
+            return 2;
+        }</span></span><span class="bg-success">
+
+    }</span></span><span class="bg-success">
+}</span></span><span class="bg-null">
+
+function field_f(cmd) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="60"><span class="label label-success">60</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="60">{
+}</span><span class="stryker-original-code" data-mutant="60"><span class="bg-success">{
+    if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="61"><span class="label label-success">61</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="61">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="62"><span class="label label-success">62</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="62">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="63"><span class="label label-success">63</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="63">cmd !&#x3D; &#x27;&#x27;</span><span class="stryker-original-code" data-mutant="61"><span class="stryker-original-code" data-mutant="62"><span class="stryker-original-code" data-mutant="63"><span class="bg-success">cmd &#x3D;&#x3D; &quot;&quot;</span></span></span></span><span class="bg-success">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="64"><span class="label label-success">64</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="64">{
+}</span><span class="stryker-original-code" data-mutant="64"><span class="bg-success">{
+        return 0;
+    }</span></span><span class="bg-success">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="65"><span class="label label-success">65</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="65">{
+}</span><span class="stryker-original-code" data-mutant="65"><span class="bg-success">{
+        if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="66"><span class="label label-success">66</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="66">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="67"><span class="label label-success">67</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="67">true</span><span class="stryker-original-code" data-mutant="66"><span class="stryker-original-code" data-mutant="67"><span class="bg-success">/^[A-Za-z]+$/.test(cmd)</span></span></span><span class="bg-success">) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="68"><span class="label label-success">68</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="68">{
+}</span><span class="stryker-original-code" data-mutant="68"><span class="bg-success">{
+            return cmd;
+        }</span></span><span class="bg-success">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="69"><span class="label label-success">69</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="69">{
+}</span><span class="stryker-original-code" data-mutant="69"><span class="bg-success">{
+            return 2;
+        }</span></span><span class="bg-success">
+
+    }</span></span><span class="bg-success">
+}</span></span><span class="bg-null">
+
+function email_f(cmd) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="70"><span class="label label-success">70</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="70">{
+}</span><span class="stryker-original-code" data-mutant="70"><span class="bg-success">{
+    if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="71"><span class="label label-success">71</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="71">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="72"><span class="label label-success">72</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="72">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="73"><span class="label label-success">73</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="73">cmd !&#x3D; &#x27;&#x27;</span><span class="stryker-original-code" data-mutant="71"><span class="stryker-original-code" data-mutant="72"><span class="stryker-original-code" data-mutant="73"><span class="bg-success">cmd &#x3D;&#x3D; &quot;&quot;</span></span></span></span><span class="bg-success">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="74"><span class="label label-success">74</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="74">{
+}</span><span class="stryker-original-code" data-mutant="74"><span class="bg-success">{
+        return 0;
+    }</span></span><span class="bg-success">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="75"><span class="label label-success">75</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="75">{
+}</span><span class="stryker-original-code" data-mutant="75"><span class="bg-success">{
+        if (</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="76"><span class="label label-success">76</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="76">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="77"><span class="label label-success">77</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="77">true</span><span class="stryker-original-code" data-mutant="76"><span class="stryker-original-code" data-mutant="77"><span class="bg-success">validateEmail(cmd)</span></span></span><span class="bg-success">) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="78"><span class="label label-success">78</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="78">{
+}</span><span class="stryker-original-code" data-mutant="78"><span class="bg-success">{
+            return cmd;
+        }</span></span><span class="bg-success">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="79"><span class="label label-success">79</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="79">{
+}</span><span class="stryker-original-code" data-mutant="79"><span class="bg-success">{
+            return 2;
+        }</span></span><span class="bg-success">
+
+    }</span></span><span class="bg-success">
+}</span></span><span class="bg-null">
+
+function validateEmail(email) </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="success" data-mutant="80"><span class="label label-success">80</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="80">{
+}</span><span class="stryker-original-code" data-mutant="80"><span class="bg-success">{
+    var re &#x3D; /^(([^&lt;&gt;()\[\]\\.,;:\s@&quot;]+(\.[^&lt;&gt;()\[\]\\.,;:\s@&quot;]+)*)|(&quot;.+&quot;))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}</span></span><span class="bg-null">
+
+function updateDone()</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="81"><span class="label label-danger">81</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="81">{
+}</span><span class="stryker-original-code" data-mutant="81"><span class="bg-danger">{
+    if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="82"><span class="label label-danger">82</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="82">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="83"><span class="label label-danger">83</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="83">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="84"><span class="label label-danger">84</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="84">zadanie.readyState &#x3D;&#x3D; 4 || zadanie.status &#x3D;&#x3D; 200</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="85"><span class="label label-danger">85</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="85">zadanie.readyState !&#x3D; 4</span><span class="stryker-original-code" data-mutant="82"><span class="stryker-original-code" data-mutant="83"><span class="stryker-original-code" data-mutant="84"><span class="stryker-original-code" data-mutant="85"><span class="bg-danger">zadanie.readyState &#x3D;&#x3D; 4</span></span><span class="bg-danger"> &amp;&amp; </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="86"><span class="label label-danger">86</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="86">zadanie.status !&#x3D; 200</span><span class="stryker-original-code" data-mutant="86"><span class="bg-danger">zadanie.status &#x3D;&#x3D; 200</span></span></span></span></span><span class="bg-danger">)
+    </span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="87"><span class="label label-danger">87</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="87">{
+}</span><span class="stryker-original-code" data-mutant="87"><span class="bg-danger">{
+
+		document.getElementById(&quot;alert_send&quot;).innerHTML &#x3D; zadanie.responseText;
+		 var empty &#x3D; &quot;&lt;div class&#x3D;\&quot;alert alert-danger\&quot; role&#x3D;\&quot;alert\&quot;&gt; &lt;strong&gt;Błąd!&lt;/strong&gt; Pole wyboru jest puste&lt;/div&gt;&quot;;
+		 var error &#x3D; &quot;&lt;div class&#x3D;\&quot;alert alert-danger\&quot; role&#x3D;\&quot;alert\&quot;&gt; &lt;strong&gt;Błąd!&lt;/strong&gt; Proszę wprowadzić poprawne dane&lt;/div&gt;&quot;;
+
+		 if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="88"><span class="label label-danger">88</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="88">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="89"><span class="label label-danger">89</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="89">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="90"><span class="label label-danger">90</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="90">sex !&#x3D; 0</span><span class="stryker-original-code" data-mutant="88"><span class="stryker-original-code" data-mutant="89"><span class="stryker-original-code" data-mutant="90"><span class="bg-danger">sex &#x3D;&#x3D; 0</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="91"><span class="label label-danger">91</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="91">{
+}</span><span class="stryker-original-code" data-mutant="91"><span class="bg-danger">{
+			 document.getElementById(&quot;alert_sex&quot;).innerHTML &#x3D; empty;
+		 }</span></span><span class="bg-danger">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="92"><span class="label label-danger">92</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="92">{
+}</span><span class="stryker-original-code" data-mutant="92"><span class="bg-danger">{
+			 document.getElementById(&quot;alert_sex&quot;).innerHTML &#x3D; &quot;&quot;;
+		 }</span></span><span class="bg-danger">
+
+		if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="93"><span class="label label-danger">93</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="93">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="94"><span class="label label-danger">94</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="94">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="95"><span class="label label-danger">95</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="95">name !&#x3D; 0</span><span class="stryker-original-code" data-mutant="93"><span class="stryker-original-code" data-mutant="94"><span class="stryker-original-code" data-mutant="95"><span class="bg-danger">name &#x3D;&#x3D; 0</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="96"><span class="label label-danger">96</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="96">{
+}</span><span class="stryker-original-code" data-mutant="96"><span class="bg-danger">{
+			document.getElementById(&quot;alert_name&quot;).innerHTML &#x3D; empty;
+		}</span></span><span class="bg-danger">else if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="97"><span class="label label-danger">97</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="97">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="98"><span class="label label-danger">98</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="98">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="99"><span class="label label-danger">99</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="99">name !&#x3D; 2</span><span class="stryker-original-code" data-mutant="97"><span class="stryker-original-code" data-mutant="98"><span class="stryker-original-code" data-mutant="99"><span class="bg-danger">name &#x3D;&#x3D; 2</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="100"><span class="label label-danger">100</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="100">{
+}</span><span class="stryker-original-code" data-mutant="100"><span class="bg-danger">{
+			document.getElementById(&quot;alert_name&quot;).innerHTML &#x3D; error;
+		}</span></span><span class="bg-danger">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="101"><span class="label label-danger">101</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="101">{
+}</span><span class="stryker-original-code" data-mutant="101"><span class="bg-danger">{
+			document.getElementById(&quot;alert_name&quot;).innerHTML &#x3D; &quot;&quot;;
+		}</span></span><span class="bg-danger">
+
+		if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="102"><span class="label label-danger">102</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="102">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="103"><span class="label label-danger">103</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="103">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="104"><span class="label label-danger">104</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="104">last_name !&#x3D; 0</span><span class="stryker-original-code" data-mutant="102"><span class="stryker-original-code" data-mutant="103"><span class="stryker-original-code" data-mutant="104"><span class="bg-danger">last_name &#x3D;&#x3D; 0</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="105"><span class="label label-danger">105</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="105">{
+}</span><span class="stryker-original-code" data-mutant="105"><span class="bg-danger">{
+			document.getElementById(&quot;alert_last_name&quot;).innerHTML &#x3D; empty;
+		}</span></span><span class="bg-danger">else if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="106"><span class="label label-danger">106</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="106">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="107"><span class="label label-danger">107</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="107">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="108"><span class="label label-danger">108</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="108">last_name !&#x3D; 2</span><span class="stryker-original-code" data-mutant="106"><span class="stryker-original-code" data-mutant="107"><span class="stryker-original-code" data-mutant="108"><span class="bg-danger">last_name &#x3D;&#x3D; 2</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="109"><span class="label label-danger">109</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="109">{
+}</span><span class="stryker-original-code" data-mutant="109"><span class="bg-danger">{
+			document.getElementById(&quot;alert_last_name&quot;).innerHTML &#x3D; error;
+		}</span></span><span class="bg-danger">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="110"><span class="label label-danger">110</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="110">{
+}</span><span class="stryker-original-code" data-mutant="110"><span class="bg-danger">{
+			document.getElementById(&quot;alert_last_name&quot;).innerHTML &#x3D; &quot;&quot;;
+		}</span></span><span class="bg-danger">
+
+		if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="111"><span class="label label-danger">111</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="111">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="112"><span class="label label-danger">112</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="112">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="113"><span class="label label-danger">113</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="113">adress !&#x3D; 0</span><span class="stryker-original-code" data-mutant="111"><span class="stryker-original-code" data-mutant="112"><span class="stryker-original-code" data-mutant="113"><span class="bg-danger">adress &#x3D;&#x3D; 0</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="114"><span class="label label-danger">114</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="114">{
+}</span><span class="stryker-original-code" data-mutant="114"><span class="bg-danger">{
+			document.getElementById(&quot;alert_adress&quot;).innerHTML &#x3D; empty;
+		}</span></span><span class="bg-danger">else if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="115"><span class="label label-danger">115</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="115">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="116"><span class="label label-danger">116</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="116">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="117"><span class="label label-danger">117</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="117">adress !&#x3D; 2</span><span class="stryker-original-code" data-mutant="115"><span class="stryker-original-code" data-mutant="116"><span class="stryker-original-code" data-mutant="117"><span class="bg-danger">adress &#x3D;&#x3D; 2</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="118"><span class="label label-danger">118</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="118">{
+}</span><span class="stryker-original-code" data-mutant="118"><span class="bg-danger">{
+			document.getElementById(&quot;alert_adress&quot;).innerHTML &#x3D; error;
+		}</span></span><span class="bg-danger">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="119"><span class="label label-danger">119</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="119">{
+}</span><span class="stryker-original-code" data-mutant="119"><span class="bg-danger">{
+			document.getElementById(&quot;alert_adress&quot;).innerHTML &#x3D; &quot;&quot;;
+		}</span></span><span class="bg-danger">
+
+		if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="120"><span class="label label-danger">120</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="120">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="121"><span class="label label-danger">121</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="121">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="122"><span class="label label-danger">122</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="122">number_album !&#x3D; 0</span><span class="stryker-original-code" data-mutant="120"><span class="stryker-original-code" data-mutant="121"><span class="stryker-original-code" data-mutant="122"><span class="bg-danger">number_album &#x3D;&#x3D; 0</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="123"><span class="label label-danger">123</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="123">{
+}</span><span class="stryker-original-code" data-mutant="123"><span class="bg-danger">{
+			document.getElementById(&quot;alert_number_album&quot;).innerHTML &#x3D; empty;
+		}</span></span><span class="bg-danger">else if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="124"><span class="label label-danger">124</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="124">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="125"><span class="label label-danger">125</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="125">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="126"><span class="label label-danger">126</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="126">number_album !&#x3D; 2</span><span class="stryker-original-code" data-mutant="124"><span class="stryker-original-code" data-mutant="125"><span class="stryker-original-code" data-mutant="126"><span class="bg-danger">number_album &#x3D;&#x3D; 2</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="127"><span class="label label-danger">127</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="127">{
+}</span><span class="stryker-original-code" data-mutant="127"><span class="bg-danger">{
+			document.getElementById(&quot;alert_number_album&quot;).innerHTML &#x3D; error;
+		}</span></span><span class="bg-danger">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="128"><span class="label label-danger">128</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="128">{
+}</span><span class="stryker-original-code" data-mutant="128"><span class="bg-danger">{
+			document.getElementById(&quot;alert_number_album&quot;).innerHTML &#x3D; &quot;&quot;;
+		}</span></span><span class="bg-danger">
+
+		if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="129"><span class="label label-danger">129</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="129">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="130"><span class="label label-danger">130</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="130">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="131"><span class="label label-danger">131</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="131">field !&#x3D; 0</span><span class="stryker-original-code" data-mutant="129"><span class="stryker-original-code" data-mutant="130"><span class="stryker-original-code" data-mutant="131"><span class="bg-danger">field &#x3D;&#x3D; 0</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="132"><span class="label label-danger">132</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="132">{
+}</span><span class="stryker-original-code" data-mutant="132"><span class="bg-danger">{
+			document.getElementById(&quot;alert_field&quot;).innerHTML &#x3D; empty;
+		}</span></span><span class="bg-danger">else if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="133"><span class="label label-danger">133</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="133">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="134"><span class="label label-danger">134</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="134">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="135"><span class="label label-danger">135</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="135">field !&#x3D; 2</span><span class="stryker-original-code" data-mutant="133"><span class="stryker-original-code" data-mutant="134"><span class="stryker-original-code" data-mutant="135"><span class="bg-danger">field &#x3D;&#x3D; 2</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="136"><span class="label label-danger">136</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="136">{
+}</span><span class="stryker-original-code" data-mutant="136"><span class="bg-danger">{
+			document.getElementById(&quot;alert_field&quot;).innerHTML &#x3D; error;
+		}</span></span><span class="bg-danger">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="137"><span class="label label-danger">137</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="137">{
+}</span><span class="stryker-original-code" data-mutant="137"><span class="bg-danger">{
+			document.getElementById(&quot;alert_field&quot;).innerHTML &#x3D; &quot;&quot;;
+		}</span></span><span class="bg-danger">
+
+		if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="138"><span class="label label-danger">138</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="138">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="139"><span class="label label-danger">139</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="139">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="140"><span class="label label-danger">140</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="140">email !&#x3D; 0</span><span class="stryker-original-code" data-mutant="138"><span class="stryker-original-code" data-mutant="139"><span class="stryker-original-code" data-mutant="140"><span class="bg-danger">email &#x3D;&#x3D; 0</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="141"><span class="label label-danger">141</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="141">{
+}</span><span class="stryker-original-code" data-mutant="141"><span class="bg-danger">{
+			document.getElementById(&quot;alert_email&quot;).innerHTML &#x3D; empty;
+		}</span></span><span class="bg-danger">else if(</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="142"><span class="label label-danger">142</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="142">false</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="143"><span class="label label-danger">143</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="143">true</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="144"><span class="label label-danger">144</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="144">email !&#x3D; 2</span><span class="stryker-original-code" data-mutant="142"><span class="stryker-original-code" data-mutant="143"><span class="stryker-original-code" data-mutant="144"><span class="bg-danger">email &#x3D;&#x3D; 2</span></span></span></span><span class="bg-danger">)</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="145"><span class="label label-danger">145</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="145">{
+}</span><span class="stryker-original-code" data-mutant="145"><span class="bg-danger">{
+			document.getElementById(&quot;alert_email&quot;).innerHTML &#x3D; error;
+		}</span></span><span class="bg-danger">else</span><a href="#" class="stryker-mutant-button" data-mutant-status-annotation="danger" data-mutant="146"><span class="label label-danger">146</span></a><span class="label label-info stryker-mutant-replacement" hidden data-mutant="146">{
+}</span><span class="stryker-original-code" data-mutant="146"><span class="bg-danger">{
+			document.getElementById(&quot;alert_email&quot;).innerHTML &#x3D; &quot;&quot;;
+		}</span></span><span class="bg-danger">
+    }</span></span><span class="bg-danger">
+}</span></span><span class="bg-null">
+
+module.exports &#x3D; {
+    sex_f: sex_f,
+    name_f: name_f,
+    last_name_f: last_name_f,
+    adress_f: adress_f,
+    number_album_f: number_album_f,
+    field_f: field_f,
+    email_f:email_f
+}</span>;</code></pre>
+</div><footer>
+    Generated with stryker-html-reporter generator. Visit the <a href="http://stryker-mutator.github.io" target="_blank">Stryker website</a></footer>
+</div>
+<script src="stryker.js" defer></script>
+</body>
+</html>
